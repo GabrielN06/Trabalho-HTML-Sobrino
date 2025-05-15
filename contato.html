@@ -1,59 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Orientado | Sistemas para Internet</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto Orientado | Sistemas para Internet</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 
+  <style>
+    .mensagem-sucesso {
+      display: none;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background-color: rgba(0, 123, 255, 0.1);
+      color: #90ee90;
+      border: 1px solid #007bff;
+      font-size: 1.1rem;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+
+    .botao-reset {
+      display: inline-block;
+      margin-top: 1.5rem;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 0.4rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-reset:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Projeto Orientado</h1>
-        <p>
-            <a href="index.html">Home</a>
-            <a href="andreh.html">| Andreh Marques</a>
-            <a href="gabriel.html">| Gabriel Nunes</a>
-            <a href="tabela.html">| Tabela de Curiosidades</a>
-            <a href="sitesfav.html">| Sites Favoritos</a>
-            | Contato
-        </p>
-    </header>
+  <header>
+    <h1>Projeto Orientado</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="andreh.html">Andreh Marques</a></li>
+        <li><a href="gabriel.html">Gabriel Nunes</a></li>
+        <li><a href="tabela.html">Tabela de Curiosidades</a></li>
+        <li><a href="sitesfav.html">Sites Favoritos</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="form-container">
+    <h2 id="form-titulo">Entre em Contato</h2>
 
+    <form id="form-contato" action="#" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
 
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
 
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" />
 
-    <section class="form-container">
-        <h2>Entre em Contato</h2>
-        <form action="#" method="post">
-          
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required>
-      
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required><br>
-      
-          <label for="assunto">Assunto:</label>
-          <input type="text" id="assunto" name="assunto">
-      
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" required></textarea>
-      
-          <fieldset>
-            <legend>Preferência de Contato:</legend>
-            <label><input type="radio" name="contato" value="email" checked> Email</label>
-            <label><input type="radio" name="contato" value="telefone"> Telefone</label>
-          </fieldset>
-      
-          <button type="submit" class="submit-button">Enviar Mensagem</button>
-        </form>
-      </section>
-      
+      <label for="assunto">Assunto:</label>
+      <input type="text" id="assunto" name="assunto" />
 
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
 
+      <fieldset>
+        <legend>Preferência de Contato:</legend>
+        <div class="radio-group">
+          <label><input type="radio" name="contato" value="email" checked /> Email</label>
+          <label><input type="radio" name="contato" value="telefone" /> Telefone</label>
+        </div>
+      </fieldset>
 
+      <button type="submit" class="submit-button">Enviar Mensagem</button>
+    </form>
 
+    <div id="mensagem-sucesso" class="mensagem-sucesso">
+      <p>Sua mensagem foi enviada! Entraremos em contato em breve.</p>
+      <button class="botao-reset" onclick="reiniciarFormulario()">Enviar outra mensagem</button>
+    </div>
+  </section>
+
+  <script>
+    window.onload = function () {
+      const form = document.getElementById("form-contato");
+      const titulo = document.getElementById("form-titulo");
+      const mensagem = document.getElementById("mensagem-sucesso");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.style.display = "none";
+        titulo.style.display = "none";
+        mensagem.style.display = "block";
+      });
+    };
+
+    function reiniciarFormulario() {
+      const form = document.getElementById("form-contato");
+      const titulo = document.getElementById("form-titulo");
+      const mensagem = document.getElementById("mensagem-sucesso");
+
+      form.reset();
+      form.style.display = "block";
+      titulo.style.display = "block";
+      mensagem.style.display = "none";
+    }
+  </script>
 </body>
 </html>
-
