@@ -1,0 +1,272 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #333, #222); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    color: #f0f0f0; 
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); 
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav a {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 2rem;
+}
+
+
+.section4 {
+    text-align: justify; 
+    margin: 1rem auto; 
+    max-width: 600px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    border: 1px solid #555;
+}
+
+.section4 p {
+    line-height: 1.6; 
+}
+
+
+.section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section3 h3,
+.section3 img {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+h2 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    padding-bottom: 0.5rem;
+}
+
+
+.principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.2s ease-in-out;
+    border: 1px solid #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card h3 {
+    margin: 1rem 0;
+    color: #fff;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+    border: 1px solid #555;
+}
+
+th, td {
+    border: 1px solid #555;
+    padding: 0.5rem;
+    text-align: left;
+    color: #f0f0f0;
+}
+
+th {
+    background-color: rgba(85, 85, 85, 0.5);
+    color: #fff;
+}
+
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.radio-group label {
+    font-weight: normal;
+    color: #fff;
+}
+
+.submit-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.3);
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #555;
+    color: #f0f0f0;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #777;
+    border-radius: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+fieldset {
+    margin-top: 1.5rem;
+    border: 1px solid #777;
+    border-radius: 0.4rem;
+    padding: 1rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-right: 1rem;
+    font-weight: normal;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
