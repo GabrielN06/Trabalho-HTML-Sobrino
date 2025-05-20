@@ -1,3 +1,10 @@
+/* lista de propriedades CSS pesquisadas:
+1) overflow: O conteúdo que ultrapassa os limites da caixa é cortado e não aparece.
+2) flex-wrap: É para realizar a quebra de linha quando nao couber no mesmo eixo.
+3) gap: É utilizado para definir espaçamento entre itens dentro de um display flex.
+4) filter: é usada para aplicar efeitos visuais a elementos como desfoque e brilho.
+5) display flex: transforma o elemento em um container flexível, facilitando o alinhamento.
+*/
 
 * {
     margin: 0;
