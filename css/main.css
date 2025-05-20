@@ -330,8 +330,8 @@ fieldset label {
   }
 
   table tbody tr:hover {
-    background-color: rgba(0, 123, 255, 0.2); /* azul leve no hover */
-    transform: scale(1.01); /* leve crescimento */
+    background-color: rgba(0, 123, 255, 0.2); 
+    transform: scale(1.01); 
     cursor: pointer;
   }
 
