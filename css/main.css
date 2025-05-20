@@ -45,6 +45,8 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -104,11 +106,6 @@ header nav a:hover {
     transform: scale(1.2);
 }
 
-main {
-    padding: 2rem;
-}
-
-
 .perfil-texto {
     text-align: justify; 
     margin: 1rem auto; 
@@ -127,8 +124,7 @@ main {
     align-items: center;
 }
 
-.section3 h3,
-.section3 img {
+.section3 h3, .section3 img {
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -142,6 +138,9 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
+#alunos{
+    padding: 15px;
+}
 
 .principal {
     display: flex;
@@ -176,6 +175,9 @@ h2 {
     color: #fff;
 }
 
+.section3 h3{
+    padding: 15px;
+}
 
 .radio-group {
     display: flex;
